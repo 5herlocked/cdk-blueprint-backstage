@@ -18,4 +18,4 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
-      - docker push public.ecr.aws/a0m0j3q7$IMAGE_REPO_NAME:$IMAGE_TAG
+      - docker push public.ecr.aws/a0m0j3q7/$IMAGE_REPO_NAME:$IMAGE_TAG
