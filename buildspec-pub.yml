@@ -11,7 +11,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - yarn build
+      - yarn build:backend --config app-config.yaml
       - DOCKER_BUILDKIT=1 docker build -f ./packages/backend/Dockerfile -t $IMAGE_REPO_NAME:$IMAGE_TAG .
       - docker tag $IMAGE_REPO_NAME:$IMAGE_TAG public.ecr.aws/a0m0j3q7/$IMAGE_REPO_NAME:$IMAGE_TAG      
   post_build:
